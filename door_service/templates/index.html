@@ -15,8 +15,29 @@
                     с крутой установкой, ручной сборки. Просто попробуй
                     мою дверь и будешь в восторге — гарантирую!</p>
                 <div class="intro-button mx-auto"><a
-                        class="btn btn-primary btn-xl" onclick="document.querySelector('iframe').style.display = 'block';">Закажи
-                    сегодня!</a></div>
+                        class="btn btn-primary btn-xl" href="#myFormModal"
+                        data-toggle="modal">Закажи сегодня!</a></div>
+                <div class="modal fade" id="myFormModal" tabindex="-1"
+                     aria-labelledby="myFormModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="myFormModalLabel">
+                                    Закажите сегодня!</h5>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="https://forms.yandex.ru/cloud/648d933cf47e731aa5f753d7/?iframe=1"
+                                        frameborder="0"
+                                        name="ya-form-648d933cf47e731aa5f753d7"
+                                        width="100%" height="600"
+                                        allowfullscreen></iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
@@ -31,7 +52,7 @@
                         <span class="section-heading-lower">вам</span>
                     </h2>
                     <p class="mb-0">Когда вы войдёте в новую дверь,
-                         вас втретит семья с благодарностью за дверь.
+                        вас втретит семья с благодарностью за дверь.
                         Сервис, дружелюбная атмосфера и всё остальное,
                         крутые двери, сделанные из крутого дерева.
                         Если вам не понравится, пожалуйста, дайте знать.
@@ -41,7 +62,19 @@
         </div>
     </div>
 </section>
-<script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
-<iframe src="https://forms.yandex.ru/cloud/648d933cf47e731aa5f753d7/?iframe=1" frameborder="0" name="ya-form-648d933cf47e731aa5f753d7" width="650" style="display:none;"></iframe>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.btn-primary').on('click', function() {
+    $('#myFormModal').modal('show');
+  });
 
+  $('iframe').on('load', function() {
+    $(this).contents().find("form").on('close', function() {
+      $('#myFormModal').modal('hide');
+    });
+  });
+});
+
+</script>
 {% endblock %}

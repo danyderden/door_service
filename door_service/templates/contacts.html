@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">Заходите</span>
+                        <span class="section-heading-lower">Мы открыты</span>
+                    </h2>
+                    <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Понедельник
+                            <span class="ms-auto">09:00-18:00</span>
+                        </li>
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Вторник
+                            <span class="ms-auto">09:00-18:00</span>
+                        </li>
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Среда
+                            <span class="ms-auto">09:00-18:00</span>
+                        </li>
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Четверг
+                            <span class="ms-auto">09:00-18:00</span>
+                        </li>
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Пятница
+                            <span class="ms-auto">09:00-18:00</span>
+                        </li>
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Суббота
+                            <span class="ms-auto">09:00-18:00</span>
+                        </li>
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Воскресенье
+                            <span class="ms-auto">На даче</span>
+                        </li>
+                    </ul>
+                    <p class="address mb-5">
+                        <em>
+                            <strong>улица Есенина</strong>
+                            <br/>
+                            Минск, Беларусь
+                        </em>
+                    </p>
+                    <p class="mb-0">
+                        <small><em>Звоните в любое время</em></small>
+                        <br/>
+                        112
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section about-heading">
+    <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0"
+             src="{% static '/assets/img/about.png'%}" alt="..."/>
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Сильные двери, Крепкие петли</span>
+                            <span class="section-heading-lower">О наших дверях</span>
+                        </h2>
+                        <p>Основаны в 2023 году Колей и его другом. Мы предлагаем богатый выбор
+                        материалов от крыжовника до секвои. Мы стремимся найти деревья и
+                        расширить ассортимент дверей.</p>
+                        <p class="mb-0">
+                            Мы гарантируем, что вы будете заходить в двери снова и снова.
+                            Сделаем
+                            <em>приятным</em>
+                            каждый выход из дома и каждое возвращение. Приглашайте друзей, знакомых
+                            и показывайте им двери.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

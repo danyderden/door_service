@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+                 src="{% static '/assets/img/intro.png'%}" alt="..."/>
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Крутая дверь</span>
+                    <span class="section-heading-lower">Стоит заказать </span>
+                </h2>
+                <p class="mb-3">Каждая дверь от меня из крутого дерева
+                    с крутой установкой, ручной сборки. Просто попробуй
+                    мою дверь и будешь в восторге — гарантирую!</p>
+                <div class="intro-button mx-auto"><a
+                        class="btn btn-primary btn-xl" onclick="document.querySelector('iframe').style.display = 'block';">Закажи
+                    сегодня!</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Обещаю</span>
+                        <span class="section-heading-lower">вам</span>
+                    </h2>
+                    <p class="mb-0">Когда вы войдёте в новую дверь,
+                         вас втретит семья с благодарностью за дверь.
+                        Сервис, дружелюбная атмосфера и всё остальное,
+                        крутые двери, сделанные из крутого дерева.
+                        Если вам не понравится, пожалуйста, дайте знать.
+                        И я сделаю всё, чтобы исправить!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+<iframe src="https://forms.yandex.ru/cloud/648d933cf47e731aa5f753d7/?iframe=1" frameborder="0" name="ya-form-648d933cf47e731aa5f753d7" width="650" style="display:none;"></iframe>
+
+{% endblock %}
